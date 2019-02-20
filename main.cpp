@@ -59,11 +59,11 @@ void runFromFile()
         std::cout << input1 << ", " << input2 << " -> ";
         for(unsigned resultIndex=0, resultsSize=resultValues.size();resultIndex<resultsSize;++resultIndex)
         {
-            std::cout << round(resultValues[resultIndex]) << " ";
+            std::cout << abs(round(resultValues[resultIndex])) << " (rounded from " << resultValues[resultIndex] << " )";
         }
         std::cout << std::endl;
         
-        // std::cout << "Target: " << shouldOutput << std::endl;
+        std::cout << "Target: " << shouldOutput << std::endl;
         
         inputValues.clear();
         targetValues.clear();
@@ -76,5 +76,5 @@ int main()
 {
     srand(time(0));
     runFromFile();
-    return 0;
+    return(0);
 }
